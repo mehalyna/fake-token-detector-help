@@ -66,7 +66,7 @@ print(f"✅ Best model ({best_model_name}) saved to model.pkl")
 2. Запустіть у терміналі:
 
    ```bash
-   py -3 train_model.py
+   py -3 train_model_RF.py
    ```
 3. Продемонструйте вивід з метриками для обох моделей та матрицю невідповідностей.
 4. Поясніть учасникам, що в `model.pkl` зберігається об’єкт моделі для подальшого використання в Streamlit. |

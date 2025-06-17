@@ -82,7 +82,7 @@ if st.button("Predict"):
             "LightGBM": lgbm_pipeline
         }[model_choice]
         pred = pipe.predict([text_input])[0]
-        label = "SCAM" if pred == 1 else "LEGIT"
+        label = "SCAM" if pred >= 0.5 else "LEGIT"
         st.success(f"{model_choice} Prediction: **{label}**")
         if hasattr(pipe, "predict_proba"):
             prob = pipe.predict_proba([text_input])[0][1]
